@@ -5,7 +5,7 @@ from watermark import File, Watermark, Position, apply_watermark
 
 app = Flask(__name__)
 botToken = os.getenv("BOT_TOKEN")
-downloadsPath = "/tmp"
+downloadsPath = os.getcwd()
 
 
 def sendPhoto(chat_id, filePath):
