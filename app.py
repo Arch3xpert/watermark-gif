@@ -57,7 +57,7 @@ def telegram():
 
     try:
         if str(chat_id) not in [str(_) for _ in list(os.getenv("CHAT_IDS").split())]:
-            sendMessage(chat_id, "Sorry, my server is out of internet 😢", messageID)
+            sendMessage(chat_id, "Sorry, you dont have permission to Access this Please Purchase it from @Archxpert\n\nThanks", messageID)
             return Response("ok", status=200)
         elif (
             "text" in msg["message"]
