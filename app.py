@@ -74,6 +74,8 @@ def telegram():
         elif "video" in msg["message"] or "photo" in msg["message"]:
             fileName = (
                 msg["message"]["video"]["file_name"]
+                if "video" in msg["message"] and "file_name" in msg["message"]["video"]
+                else "video.mp4"
                 if "video" in msg["message"]
                 else "photo.jpeg"
             )
