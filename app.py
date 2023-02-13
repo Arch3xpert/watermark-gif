@@ -57,7 +57,7 @@ def telegram():
 
     try:
         if str(chat_id) not in [str(_) for _ in list(os.getenv("CHAT_IDS").split())]:
-            sendMessage(chat_id, "Sorry, you dont have permission to Access this Please Purchase it from @THAKUR0128\n\nUse the Command /help For more information About this bot And Use Command /purchase for Prices\n\nThanks", messageID)
+            sendMessage(chat_id, "Sorry, my server is out of internet 😢", messageID)
             return Response("ok", status=200)
         elif (
             "text" in msg["message"]
@@ -67,7 +67,7 @@ def telegram():
             inputText = msg["message"]["text"]
             sendMessage(
                 chat_id,
-                "You have not send any video or photo and sent this text: " + inputText,
+                "You have not sent any video or photo and sent this text: " + inputText,
                 messageID,
             )
 
